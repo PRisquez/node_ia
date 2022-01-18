@@ -10,4 +10,12 @@ if(annyang){
         voices = window.speechSynthesis.getVoices();
         console.log(voices);
     }
+
+    let commands = {
+        'hello': function() { alert("Hello wordl!"); }
+    };
+
+    annyang.addCommands(commands);
+
+    annyang.start({ autoStart: false, continuous: true});
 }
